@@ -13,6 +13,7 @@ function ProductScreen({ match }) {
       setProduct(data);
     }
     fetchProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // console.log(match);
@@ -61,14 +62,14 @@ function ProductScreen({ match }) {
                   </Col>
                 </Row>
               </ListGroup.Item>
-                <Button
-                className="m-2"
-                  variant="secondary"
-                  size="sm"
-                  disabled={product.countInStock === 0}
-                  type='button'>
-                  Add to Cart
-                </Button>
+              <Button
+                className='m-2'
+                variant='secondary'
+                size='sm'
+                disabled={product.countInStock === 0}
+                type='button'>
+                Add to Cart
+              </Button>
             </ListGroup>
           </Card>
         </Col>
