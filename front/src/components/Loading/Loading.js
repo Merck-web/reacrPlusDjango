@@ -3,14 +3,18 @@ import { Spinner } from "react-bootstrap";
 
 function Loading() {
   return (
-    <div >
+    <div style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
       <Spinner
         animation='grow'
         role='status'
         style={{
           height: "100px",
           width: "100px",
-          margin: "auto",
+          margin: "10px",
           display: "block",
         }}
       />
@@ -20,7 +24,7 @@ function Loading() {
         style={{
           height: "100px",
           width: "100px",
-          margin: "auto",
+          margin: "10px",
           display: "block",
         }}
       />
@@ -30,7 +34,7 @@ function Loading() {
         style={{
           height: "100px",
           width: "100px",
-          margin: "auto",
+          margin: "10px",
           display: "block",
         }}
       />
