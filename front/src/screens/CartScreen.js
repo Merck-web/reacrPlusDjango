@@ -11,7 +11,7 @@ import {
   Card,
 } from "react-bootstrap";
 import Message from "../components/Message/Message";
-import { addToCart } from "../actions/cartActions";
+import { addToCart, removeFromCart } from "../actions/cartActions";
 
 function CartScreen({ match, location, history }) {
   const productId = match.params.id;
@@ -27,10 +27,12 @@ function CartScreen({ match, location, history }) {
     }
   }, [dispatch, productId, qty]);
 
-  const removeFromCartHandler = (id) => {};
+  const removeFromCartHandler = (id) => {
+    dispatch(removeFromCart(id));
+  };
   const checkoutHandler = () => {
-    history.push('/login?redirect=shipping')
-  }
+    history.push("/login?redirect=shipping");
+  };
   return (
     <Row>
       <Col md={8}>
@@ -96,7 +98,11 @@ function CartScreen({ match, location, history }) {
             </ListGroup.Item>
           </ListGroup>
           <ListGroup.Item>
-            <Button type='button' className='btn-block' disabled={cartItems.length === 0} onClick={checkoutHandler}>
+            <Button
+              type='button'
+              className='btn-block'
+              disabled={cartItems.length === 0}
+              onClick={checkoutHandler}>
               Proceed To Checkout
             </Button>
           </ListGroup.Item>
