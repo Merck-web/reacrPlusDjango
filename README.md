@@ -23,10 +23,11 @@
 * 2 - cd created directory
 * 3 - Create virtual environment: virtualenv myenv
 * 4 - myenv\scripts\activate
-* 5 - pip install -r requer.txt
+* 5 - pip install -r requirements.txt
 * 6 - cd back
 * 6 - python manage.py runserver
 
 # Install react modules
 * 1 - cd front
 * 2 - npm install
+* 3 - npm start
